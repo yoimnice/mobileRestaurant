@@ -1,0 +1,372 @@
+/* MAIN */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(212, 212, 212);
+    font-family: Poppins;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    width: 100px;
+}
+
+/* Palette */
+
+:root{
+    --main-clr-: #6474FF;
+    --second-clr-: #4FFFEA;
+    --bckrd-clr-: #E5E5E5;
+
+    --txt-shw-: 0px 5px 10px rgba(0, 0, 0, 0.3);
+
+    --gradient-clr-:  linear-gradient(180deg, #6D7CFF 0%, #3FD7FF 100%);
+}
+
+
+
+/* Typography */
+
+header {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 35em;
+    min-height: 100vh;
+    border-radius: 1em;
+    background-color: #E5E5E5;
+    padding: 1em;
+    margin: 0 auto;
+    margin-bottom: 5em;
+}
+
+
+/* HEADER */
+/* header-burger-menu */
+.header-menu{
+    display: flex;
+    position: fixed;
+    background-color: var(--bckrd-clr-);
+    width: 35em;
+    padding: 1em;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    justify-content: space-between;
+    height: 3em;
+
+    margin: 0 auto;
+}
+
+.header-menu > div{
+    display: flex;
+    justify-content: center;
+}
+
+.burger-menu{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    height: 100%;
+
+    font-size: 2em;
+}
+
+.burger-menu > :nth-child(1){
+    width: 1.5em;
+    height: .25em;
+    border-radius: 1em;
+    background: var(--gradient-clr-);
+}
+.burger-menu > :nth-child(2){
+    width: 2em;
+    height: .25em;
+    border-radius: 1em;
+    background: var(--gradient-clr-);
+}
+.burger-menu > :nth-child(3){
+    width: 1em;
+    height: .25em;
+    border-radius: 1em;
+    background: var(--gradient-clr-);
+}
+
+.location-panel{
+    display: flex;
+    font-size: 1.5em;
+    justify-content: space-between;
+    font-weight: 500;
+    align-items: center;
+    gap: .8em;
+}
+
+.icon{
+    color:var(--main-clr-);
+    text-shadow: var(--txt-shw-);
+}
+
+.profile-panel{
+    font-size: 3em;
+}
+
+/* Food List */
+
+.food-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: var(--txt-shw-);
+    border-radius: 1em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-bottom: 1em;
+}
+
+.food-pic-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: var(--gradient-clr-);
+    border-radius: 1em;
+
+    width: 33em;
+    height: 15em;
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.food-pic{
+    transform: scale(3);
+    top: 5em;
+    display: flex;
+    position: absolute;
+}
+
+.food-info{
+    display: flex;
+    justify-content: space-between;
+    margin: auto 0;
+    width: 90%;
+}
+
+.food-info-element{
+    margin-bottom: 2em;
+}
+
+.order-btn-container{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 25%;
+}
+
+/* Order List */
+
+.order-phrase-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.ordered-item{
+    display: grid;
+    grid-template-columns: 10em 30% 40% 0em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.remove-btn{
+    display: flex;
+    padding-top: .2em;
+    color: rgb(187, 187, 187);
+}
+
+.total-price-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 3px solid rgb(0, 0, 0);
+    padding-top: 1em;
+}
+
+.order-container{
+    display: flex;
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.order-btn{
+    background-color: var(--main-clr-);
+    color: white;
+    font-size: 1.5em;
+    padding: .5em 2em .5em 2em;
+    margin: 0 auto;
+    border: none;
+    border-radius: .5em;
+}
+
+.order-btn:hover{
+    opacity: 0.8;
+}
+
+.order-btn:active{
+    opacity: 1;
+}
+
+.remove-btn:hover{
+    cursor: pointer;
+}
+
+/* Modal */
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.37);
+    z-index: 1200;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal-window{
+    height: 25em;
+    width: 25em;
+    background-color: white;
+    box-shadow: 0 0 10em 1px rgba(0, 0, 0, 0.315);
+    border-radius: 1em;
+    padding: 3em;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8em;
+    height: 6em;
+
+}
+
+.modal-input{
+    height: 3em;
+    font-size: 1em;
+    padding-left: 2em;
+}
+
+.payment-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+/* end message */
+.end-message{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 2em auto;
+    background-color: white;
+    border-radius: 1em;
+    width: 25em;
+    height: 5em;
+}
+
+/* footer */
+
+.footer-menu{
+    z-index: 1000;
+    width: 35em;
+    height: 5em;
+
+    position: fixed;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    
+    border-radius: 0 0 1em 1em ;
+    background-color: var(--bckrd-clr-);
+}
+
+.menu-list{
+    text-decoration: none;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+}
+
+.icon-size-xl{
+    font-size:2em!important;
+}
+
+.active{
+    border-bottom: .1em solid var(--main-clr-);
+}
+
+/* Rating system */
+.rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin: 0 auto;
+    gap: 1em;
+
+    left: 0;
+    right: 0;
+    top: 60vh;
+    border-radius: 1em;
+    background-color: rgb(255, 255, 255);
+    width: 25em;
+    height: 15em;
+}
+
+
+/* utility */
+.gray{
+    color: rgb(143, 143, 143);
+}
+
+.red{
+    color: red;
+}
+
+.non-visible{
+    display: none;
+}
