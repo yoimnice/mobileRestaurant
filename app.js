@@ -26,7 +26,7 @@ document.addEventListener('click', function(e){
         removeFromList(e.target.dataset.remove);
     } else if(e.target.id === 'rating-submission'){
         console.log(e.target.id);
-        closeModal();
+        modalRatingEvent();
     };
 })
 
@@ -86,6 +86,11 @@ function modalevent(){
     document.querySelector('#modal-background').innerHTML = renderEndMessage();
     event.preventDefault();
 });
+}
+
+function modalRatingEvent(){
+    closeModal();
+    location.reload();
 }
 
 function checkForDiscount(){
